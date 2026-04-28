@@ -16,7 +16,9 @@
     max-inline-size: 1440px;
     max-block-size: 100vh;
     font-family: var(--font-basic);
-    font-variation-settings: "wght" var(--fw-basic);
+    /*font-size: 18px; убрала т к перебивает стили в карточках*/
+    /*font-variation-settings: "wght" var(--fw-basic);
+    РАЗОБРАТЬСЯ ПОЧЕМУ ЛОМАЕТ ПО ТЗ ПРИМЕНЕНО В ПЕЙДЖ*/
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
@@ -33,7 +35,7 @@
     font-family: var(--font-accent);
     text-transform: uppercase;
     /*margin: 100px auto 98px;*/
-     margin: 100px clamp(0px, calc(-130.282px + 34.742vw), 370px) clamp(98px, calc(97.296px + 0.188vw), 100px);
+    margin: 100px clamp(0px, calc(-130.282px + 34.742vw), 370px) clamp(98px, calc(97.296px + 0.188vw), 100px);
 }
 
 .container {
@@ -45,6 +47,7 @@
     justify-content: center;
     align-items: center;
     */
+    margin: 0 auto;
 }
 
 .header_container {
@@ -64,4 +67,77 @@
 .header_subtitle {
     font-size: var(--fs-subtitle);
     font-weight: var(--fw-accent);
+}
+
+.card {
+    font-weight: var(--fw-basic);
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.card_title {
+    font-weight: var(--fw-title);
+    font-size: 18px;
+    padding: 4px 10px;
+    
+}
+
+.card_images {
+    width: 100%;
+    aspect-ratio: 1 / 1; /*ВЫУЧИТЬ!!!*/
+    overflow: hidden;
+    
+}
+
+.card_images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%; /*ВЫУЧИТЬ!!!*/
+    
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+
+.buttons_box {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+    padding: 0 25px 25px 0;
+}
+
+.card__icon-button {
+    width: 27px;
+    height: 24px;
+    background-color: transparent;
+    border: 2px solid red;
+}
+
+.card__icon-button img {
+    /*width: 27px;
+   height: 24px;*/
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card__like-button {
+    width: 130px; /*по макету фиксированная*/
+    height: 38px; /*по макету фиксированная*/
+    background-color: transparent;
+    border: 2px solid #000;
+}
+
+.button__text {
+    font-family: var(--font-accent);
+    font-weight: var(--fw-accent);
+    font-size: 14px;
+    line-height: 90%;
+    text-transform: capitalize; /*проверить*/
 }

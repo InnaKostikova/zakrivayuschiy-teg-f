@@ -13,40 +13,47 @@
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
+    max-inline-size: 1440px;
+    max-block-size: 100vh;
     font-family: var(--font-basic);
     font-variation-settings: "wght" var(--fw-basic);
     background-image: var(--bg-image);
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-}
-
-.container {
-    inline-size: var(--width-container);
-    border: 2px solid rgba(0, 0, 0, 1);
-    
 }
 
 .header {
     /*display: flex;
+   !* flex-direction: column;*!
+    justify-content: center;
+    align-items: center;*/
+    
+    
+    font-family: var(--font-accent);
+    text-transform: uppercase;
+    /*margin: 100px auto 98px;*/
+     margin: 100px clamp(0px, calc(-130.282px + 34.742vw), 370px) clamp(98px, calc(97.296px + 0.188vw), 100px);
+}
+
+.container {
+    width: var(--width-container);
+    border: 2px solid rgba(0, 0, 0, 1);
+    background-color: #fff;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;*/
-    background-color: #fff;
-    font-family: var(--font-accent);
-    text-transform: uppercase;
-    margin: 100px 370px 98px;
+    */
 }
 
 .header_container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: var(--padding-header);
-    
-    
 }
 
 .header_title {

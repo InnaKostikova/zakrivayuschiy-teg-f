@@ -69,10 +69,17 @@
     font-weight: var(--fw-accent);
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .card {
     font-weight: var(--fw-basic);
     font-size: 18px;
     line-height: 21px;
+    
 }
 
 .card_title {
@@ -93,7 +100,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 70%; /*ВЫУЧИТЬ!!!*/
+    object-position: center 70%; /*ВЫУЧИТЬ!!! перенести в сансет*/
     
 }
 

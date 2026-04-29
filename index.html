@@ -48,7 +48,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -76,7 +76,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -105,7 +105,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -134,7 +134,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -164,7 +164,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -192,7 +192,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -221,7 +221,7 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
@@ -251,10 +251,35 @@
       <button
         class="card__like-button"
         type="button">
-        <span class="button__text">like</span>
+        <span class="button__text">Like</span>
       </button>
     </div>
   </section>
+  <div class="button_save-memory">
+    <button class="button_save"
+            type="button"
+            onclick="window['dialog-id'].showModal();"
+            aria-controls="dialog-id">
+      <svg viewBox="0 0 39 39">
+        <use href="./svg/floppy1.svg#floppy"/>
+      </svg>
+      <span class="button__text">Сохранить на память</span>
+    </button>
+  </div>
+  <dialog id="dialog-id"
+          class="modal">
+    <div class="save-prompt">
+      <svg viewBox="0 0 39 39">
+        <use href="./svg/floppy1.svg#floppy"/>
+      </svg>
+      <p>Вставьте дискету, чтобы продолжить</p>
+    </div>
+    <button class="ok"
+            type="button"
+            onclick="window['dialog-id'].close()">
+      <span class="button__text">ок</span>
+    </button>
+  </dialog>
 </main>
 <script src="./scripts/like.js"></script>
 </body>

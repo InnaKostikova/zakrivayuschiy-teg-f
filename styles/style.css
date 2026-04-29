@@ -72,7 +72,9 @@
 .main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
+    
 }
 
 .card {
@@ -114,14 +116,15 @@
     font-size: 14px;
     color: rgba(0, 0, 0, 1);
     opacity: 50%;
-    mix-blend-mode: hard-light; /*не увидела эффекта*/
+    mix-blend-mode: hard-light; /*не увидела эффекта от применения*/
     text-shadow: -1px 0 var(--shadow-color),
     0 1px var(--shadow-color),
     1px 0 var(--shadow-color),
     0 -1px var(--shadow-color);
 }
+
 /* из-за применения text-stroke обводка рисуется не как в макете
-(на макете она снаружи, но text-stroke задан по ТЗ) */
+(на макете она снаружи,у меня внутри, но text-stroke задан по ТЗ) */
 @supports ((-webkit-text-stroke: 1px var(--shadow-color)) or (text-stroke: 1px var(--shadow-color))) {
     .label {
         -webkit-text-stroke: 1px var(--shadow-color);
@@ -163,8 +166,13 @@
 .card__like-button {
     width: 130px; /*по макету фиксированная*/
     height: 38px; /*по макету фиксированная*/
+    /*padding: 9px 17px;*/
     background-color: transparent;
     border: 2px solid #000;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    /*фигня с выравниванием кнопки по вертикали*/
 }
 
 .button__text {
@@ -172,5 +180,55 @@
     font-weight: var(--fw-accent);
     font-size: 14px;
     line-height: 90%;
-    text-transform: capitalize; /*проверить*/
+    
+    /*text-transform: capitalize; *//*проверить*/
+}
+
+.button_save-memory {
+}
+
+
+.button_save {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid rgba(0, 0, 0, 1); /* объеденить с другими кнопками*/
+    padding: 15px 20px;
+    margin-bottom: 100px;
+    background-color: #fff;
+    
+}
+
+.button_save svg {
+    width: 21px;
+    height: 21px;
+}
+
+.modal {
+  /*  display: flex;
+    flex-direction: column;
+    gap: 30px;*/
+    width: clamp(24.357rem, calc(24.055rem + 1.127vw), 25.214rem);
+    padding: 30px;
+}
+
+.modal[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.modal svg {
+    width: 39px;
+    height: 39px;
+}
+
+.save-prompt {
+    display: flex;
+    gap: 20px;
+    font-family: var(--font-accent);
+    font-weight: var(--fw-accent);
+    font-size: 14px;
+    line-height: 150%;
+    text-transform: uppercase;
 }

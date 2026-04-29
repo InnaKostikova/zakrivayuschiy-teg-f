@@ -93,7 +93,7 @@
     width: 100%;
     aspect-ratio: 1 / 1; /*ВЫУЧИТЬ!!!*/
     overflow: hidden;
-    
+    position: relative;
 }
 
 .card_images img {
@@ -102,6 +102,32 @@
     object-fit: cover;
     object-position: center 70%; /*ВЫУЧИТЬ!!! перенести в сансет*/
     
+}
+
+.label {
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 25px;
+    font-family: var(--font-accent);
+    font-weight: var(--fw-accent);
+    font-size: 14px;
+    color: rgba(0, 0, 0, 1);
+    opacity: 50%;
+    mix-blend-mode: hard-light; /*не увидела эффекта*/
+    text-shadow: -1px 0 var(--shadow-color),
+    0 1px var(--shadow-color),
+    1px 0 var(--shadow-color),
+    0 -1px var(--shadow-color);
+}
+/* из-за применения text-stroke обводка рисуется не как в макете
+(на макете она снаружи, но text-stroke задан по ТЗ) */
+@supports ((-webkit-text-stroke: 1px var(--shadow-color)) or (text-stroke: 1px var(--shadow-color))) {
+    .label {
+        -webkit-text-stroke: 1px var(--shadow-color);
+        text-stroke: 1px var(--shadow-color);
+        text-shadow: none;
+    }
 }
 
 .card-text {

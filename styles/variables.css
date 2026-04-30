@@ -6,6 +6,7 @@
     --fw-basic: 410;
     --fw-title: 715;
     --fw-accent: 400;
+    --fs-accent: 14px;
     /* Градиент */
     --bg-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
@@ -17,8 +18,11 @@
     --fs-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     /* обводка */
     --shadow-color: rgba(255, 255, 255, 1);
-    
-    
+}
+@media (width <= 375px) {
+    :root {
+        --width-container: clamp(320px, calc(0px + 100vw), 375px);
+    }
 }
 
 

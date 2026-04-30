@@ -46,7 +46,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -74,7 +74,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -103,7 +103,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -132,7 +132,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -162,7 +162,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -190,7 +190,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -219,7 +219,7 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
@@ -249,18 +249,18 @@
         <!--выше временная иконка, поменять-->
       </button>
       <button
-        class="card__like-button"
+        class="card__like-button button_decorated"
         type="button">
         <span class="button__text">Like</span>
       </button>
     </div>
   </section>
   <div class="button_save-memory">
-    <button class="button_save"
+    <button class="button_save button_decorated"
             type="button"
             onclick="window['dialog-id'].showModal();"
             aria-controls="dialog-id">
-      <svg viewBox="0 0 39 39">
+      <svg  class="floppy" viewBox="0 0 39 39">
         <use href="./svg/floppy1.svg#floppy"/>
       </svg>
       <span class="button__text">Сохранить на память</span>
@@ -269,12 +269,12 @@
   <dialog id="dialog-id"
           class="modal">
     <div class="save-prompt">
-      <svg viewBox="0 0 39 39">
+      <svg class="modal_floppy" viewBox="0 0 39 39">
         <use href="./svg/floppy1.svg#floppy"/>
       </svg>
       <p>Вставьте дискету, чтобы продолжить</p>
     </div>
-    <button class="ok"
+    <button class="button_ok button_decorated"
             type="button"
             onclick="window['dialog-id'].close()">
       <span class="button__text">ок</span>

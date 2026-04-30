@@ -23,6 +23,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    margin: 0 auto;
 }
 
 .header {
@@ -47,7 +48,7 @@
     justify-content: center;
     align-items: center;
     */
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .header_container {
@@ -74,6 +75,7 @@
     flex-direction: column;
     align-items: center;
     gap: 50px;
+   
     
 }
 
@@ -113,7 +115,7 @@
     right: 25px;
     font-family: var(--font-accent);
     font-weight: var(--fw-accent);
-    font-size: 14px;
+    font-size: var(--fs-accent);
     color: rgba(0, 0, 0, 1);
     opacity: 50%;
     mix-blend-mode: hard-light; /*не увидела эффекта от применения*/
@@ -168,7 +170,7 @@
     height: 38px; /*по макету фиксированная*/
     /*padding: 9px 17px;*/
     background-color: transparent;
-    border: 2px solid #000;
+    /*border: 2px solid #000; перенесла в общ стили*/
     /*display: flex;
     align-items: center;
     justify-content: center;*/
@@ -178,57 +180,100 @@
 .button__text {
     font-family: var(--font-accent);
     font-weight: var(--fw-accent);
-    font-size: 14px;
+    font-size: var(--fs-accent);
     line-height: 90%;
-    
-    /*text-transform: capitalize; *//*проверить*/
 }
 
 .button_save-memory {
+
 }
 
 
 .button_save {
     display: flex;
     align-items: center;
+    align-self: center;
     gap: 8px;
-    border: 2px solid rgba(0, 0, 0, 1); /* объеденить с другими кнопками*/
+    height: 55px; /*FIX*/
     padding: 15px 20px;
-    margin-bottom: 100px;
+   margin-bottom: 100px;
     background-color: #fff;
     
 }
 
-.button_save svg {
+.floppy {
     width: 21px;
     height: 21px;
 }
 
 .modal {
-  /*  display: flex;
-    flex-direction: column;
-    gap: 30px;*/
-    width: clamp(24.357rem, calc(24.055rem + 1.127vw), 25.214rem);
-    padding: 30px;
+   display: none;
+    width: clamp(341px, calc(336.775px + 1.127vw), 353px);
+    border: 2px solid rgba(0, 0, 0, 1);
+    /*padding: 30px;*/
+    /*position: fixed;
+    inset: 0;*/
 }
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 
 .modal[open] {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+    padding: 30px;
 }
 
-.modal svg {
+.modal_floppy {
     width: 39px;
     height: 39px;
+    flex-shrink: 0;
 }
+
 
 .save-prompt {
     display: flex;
+    align-items: center;
     gap: 20px;
     font-family: var(--font-accent);
     font-weight: var(--fw-accent);
-    font-size: 14px;
+    font-size: var(--fs-accent);
     line-height: 150%;
     text-transform: uppercase;
+}
+
+.button_ok {
+    width: 293px; /*FIX*/
+    height: 38px; /*FIX*/
+    text-transform: uppercase;
+}
+
+.button_decorated {
+border: 2px solid rgba(0, 0, 0, 1);
+}
+
+@media (width <= 375px) {
+
+.button_save {
+    flex-direction: column;
+    height: 84px;
+}
+.floppy {
+    width: 28px;
+    height: 28px;
+}
+/*.modal[open] { ЛОМАЕТ
+    padding: 30px 40px;
+}*/
+.button_ok {
+    width: 100%;
+}
+/*.main {
+    margin: 0 auto 180px;
+}*/
 }

@@ -182,12 +182,14 @@
     font-weight: var(--fw-accent);
     font-size: var(--fs-accent);
     line-height: 90%;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
 }
 
 .button_save-memory {
 
 }
-
 
 .button_save {
     display: flex;
@@ -197,13 +199,16 @@
     height: 55px; /*FIX*/
     padding: 15px 20px;
     margin-bottom: 100px;
-    background-color: #fff;
-    
+    background-color: var(--bg-accent-color);
 }
 
 .floppy {
     width: 21px;
     height: 21px;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
+    fill: var(--accent-color);
 }
 
 .modal {
@@ -219,7 +224,6 @@
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-
 .modal[open] {
     display: flex;
     flex-direction: column;
@@ -234,7 +238,6 @@
     height: 39px;
     flex-shrink: 0;
 }
-
 
 .save-prompt {
     display: flex;
@@ -255,6 +258,33 @@
 
 .button_decorated {
     border: 2px solid rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s ease; /*проверенно*/
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-accent-color);
+    color: var(--accent-color);
+}
+
+.button_decorated::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    transition: translate 0.5s ease-in-out;
+    translate: -100%;
+    background-color: rgba(0, 0, 0, 1);
+    inset: 0;
+}
+
+.button_decorated:hover::before {
+    translate: 0;
+}
+
+.button_decorated:focus {
+    outline: none;
+}
+
+.button_decorated:focus-visible {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
 }
 
 .sunset {

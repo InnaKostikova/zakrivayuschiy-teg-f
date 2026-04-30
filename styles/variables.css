@@ -18,6 +18,9 @@
     --fs-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
     /* обводка */
     --shadow-color: rgba(255, 255, 255, 1);
+    /* цвета */
+    --bg-accent-color: rgba(255, 255, 255, 1);
+    --accent-color: rgba(255, 255, 255, 1);
 }
 @media (width <= 375px) {
     :root {

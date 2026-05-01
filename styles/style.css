@@ -145,24 +145,23 @@
 .buttons_box {
     display: flex;
     justify-content: end;
-    align-items: center;
+    /*align-items: center;*/
     gap: 12px;
     padding: 0 25px 25px 0;
+   /* width: 169px;
+    height: 38px;*/
 }
 
 .card__icon-button {
-    width: 27px;
-    height: 24px;
+    /*width: 31px;
+    height: 28px;*/ /*задавание размеров ломает свг*/
     background-color: transparent;
     transition: border 0.3s ease;
     border: 2px solid transparent;
-}
-
-.card__icon-button img {
-    /*width: 27px;
-   height: 24px;*/
-    width: 100%;
-    height: 100%;
+    padding: 0;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/ /*проверить потом через ПП*/
 }
 
 .card__icon-button:focus {
@@ -171,6 +170,10 @@
 
 .card__icon-button:focus-visible {
     border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.sparks {
+    opacity: 0;
 }
 
 .card__like-button {

@@ -9,14 +9,20 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/* Антон, если Вас не затруднит, можете дать обратную связь на что приоритетнее
+   мы смотрим. Имею ввиду заданные размеры в фигме или что бы по пиксель-перфект
+   сходилось?
+   Как пример, Лейбл - он у меня задан с отступами по макету в 25 пх сверху  справа
+   но по ПП, он не совсем на своем месте
+   Что для нас приоритетнее?*/
+
+/* Доп. шрифты изначально у меня указаны в переменной, но увидела в рекомендациях
+прописать шрифт fantasy, решила дополнительно добавить их и здесь.*/
 
 .page {
     min-inline-size: 320px;
     min-block-size: 100dvb;
-    font-family: var(--font-basic);
-    /*font-size: 18px; убрала т к перебивает стили в карточках*/
-    /*font-variation-settings: "wght" var(--fw-basic);
-    РАЗОБРАТЬСЯ ПОЧЕМУ ЛОМАЕТ ПО ТЗ ПРИМЕНЕНО В ПЕЙДЖ*/
+    font-family: var(--font-basic), sans-serif;
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
@@ -25,15 +31,15 @@
 }
 
 .header {
-    font-family: var(--font-accent);
+    font-family: var(--font-accent), fantasy;
     text-transform: uppercase;
-    margin-block: 100px 98px;
+    margin-block: 100px 95px;
 }
 
 .container {
     width: var(--width-container);
-    border: 2px solid rgba(0, 0, 0, 1);
-    background-color: #fff;
+    border: 2px solid var(--border-color);
+    background-color: var(--bg-color);
     margin-inline: auto;
 }
 
@@ -64,13 +70,13 @@
 }
 
 .card {
-    font-weight: var(--fw-basic);
+    font-variation-settings: "wght" var(--fw-basic);
     font-size: 18px;
     line-height: 21px;
 }
 
 .card_title {
-    font-weight: var(--fw-title);
+    font-variation-settings: "wght" var(--fw-title);
     font-size: 18px;
     padding: 4px 10px;
 }
@@ -80,6 +86,8 @@
     aspect-ratio: 1 / 1;
     overflow: hidden;
     position: relative;
+    border-block: 2px solid var(--border-color);
+    box-sizing: initial; /*без этого ломается контейнер по высоте*/
 }
 
 .card_images img {
@@ -94,10 +102,10 @@
     z-index: 1;
     top: 25px;
     right: 25px;
-    font-family: var(--font-accent);
+    font-family: var(--font-accent), fantasy;
     font-weight: var(--fw-accent);
     font-size: var(--fs-accent);
-    color: rgba(0, 0, 0, 1);
+    color: var(--color);
     opacity: 50%;
     mix-blend-mode: hard-light; /*не увидела эффекта от применения*/
     text-shadow: -1px 0 var(--shadow-color),
@@ -149,7 +157,7 @@
 }
 
 .card__icon-button:focus-visible {
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 2px solid var(--border-color);
 }
 
 .sparks {
@@ -163,7 +171,7 @@
 }
 
 .button__text {
-    font-family: var(--font-accent);
+    font-family: var(--font-accent), fantasy;
     font-weight: var(--fw-accent);
     font-size: var(--fs-accent);
     line-height: 90%;
@@ -180,7 +188,6 @@
     height: 55px; /*FIX*/
     padding: 15px 20px;
     margin-bottom: 100px;
-    background-color: var(--bg-accent-color);
 }
 
 .floppy {
@@ -195,7 +202,9 @@
 .modal {
     display: none;
     width: clamp(341px, calc(336.775px + 1.127vw), 353px);
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+    padding: 0;
 }
 
 .modal::backdrop {
@@ -221,7 +230,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    font-family: var(--font-accent);
+    font-family: var(--font-accent), fantasy;
     font-weight: var(--fw-accent);
     font-size: var(--fs-accent);
     line-height: 150%;
@@ -229,13 +238,22 @@
 }
 
 .button_ok {
-    width: 293px; /*FIX*/
-    height: 38px; /*FIX*/
+    /*width: 293px; !*FIX*!
+    height: 38px; !*FIX*!*/
+    /* К сожалению, мне никак не удалось сохранить фикс. ширину, как в макете
+    Может быть в макете опечатка? Имею ввиду размер модального окна.
+    В макете для модалки в мобильной версии паддинги увеличиваются, но у меня
+    текст плывет в таком случае*/
+    width: 100%;
+    max-width: 293px;
+    height: 38px;
+    flex-shrink: 1;
     text-transform: uppercase;
+    padding: 0;
 }
 
 .button_decorated {
-    border: 2px solid rgba(0, 0, 0, 1);
+    border: 2px solid var(--border-color);
     transition: box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -249,7 +267,7 @@
     z-index: 0;
     transition: translate 0.5s ease-in-out;
     translate: -100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--decorated-color);
     inset: 0;
 }
 
@@ -262,7 +280,7 @@
 }
 
 .button_decorated:focus-visible {
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+    box-shadow: 2px 2px 0 var(--decorated-color);
 }
 
 .sunset {
@@ -317,6 +335,6 @@
     }
     
     .header {
-        margin-block: 100px 100px;
+        margin-block: 100px 97px;
     }
 }

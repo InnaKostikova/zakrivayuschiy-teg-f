@@ -19,8 +19,12 @@
     /* обводка */
     --shadow-color: rgba(255, 255, 255, 1);
     /* цвета */
+    --bg-color: rgba(255, 255, 255, 1);
+    --color: rgba(0, 0, 0, 1);
     --bg-accent-color: rgba(255, 255, 255, 1);
     --accent-color: rgba(255, 255, 255, 1);
+    --border-color: rgba(0, 0, 0, 1);
+    --decorated-color: rgba(0, 0, 0, 1);
     /*для анимации сердца*/
     --contour: rgba(0, 0, 0, 1);
     --animation-fill-color: rgba(255, 0, 0, 1);

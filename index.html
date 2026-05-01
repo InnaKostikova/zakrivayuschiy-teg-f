@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Закрывающий тег</title>
-  <link rel="icon" href="./images/favicon/favicon (1).ico" sizes="any" type="image/x-icon"/>
-  <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml"/>
-  <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-180x180.png" sizes="180x180"/>
-  <link rel="stylesheet" href="./fonts/fonts.css"/>
-  <link rel="stylesheet" href="./styles/variables.css"/>
-  <link rel="stylesheet" href="./styles/globals.css"/>
-  <link rel="stylesheet" href="./styles/style.css"/>
-  <link rel="stylesheet" href="./styles/animations.css"/>
+  <link rel="icon" href="./images/favicon/favicon.ico" sizes="any" type="image/x-icon">
+  <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon-180x180.png" sizes="180x180">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="./styles/variables.css">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animations.css">
 </head>
 <body class="page">
 <header class="header">
@@ -28,6 +28,7 @@
   <section class="card card-start container">
     <h2 class="card_title">Фритрек и нулевой спринт: Подготовка к работе</h2>
     <div class="card_images">
+      <!--Добавила атр. loading="lazy" всем изображениям, кроме первого-->
       <img src="./images/00E5B4D4-88DD-4B2C-8D11-2B128A12E90A_1_105_c.png"
            class="sunset"
            alt="Девушка любуется закатом в горах">
@@ -58,7 +59,6 @@
           <path class="sparks"
                 d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
                 fill="var(--animation-fill-color)"/>
-
         </svg>
       </button>
       <button
@@ -71,8 +71,9 @@
   <section class="card card-blank_slate container">
     <h2 class="card_title">1 спринт: Я — чистый лист</h2>
     <div class="card_images">
-      <img src="./images/Девушка пишет в записной книжке - 1280x854 (1).jpg"
+      <img src="./images/girlswritten.jpg"
            class="blank_slate"
+           loading="lazy"
            alt="Девушка пишет в записной книжке">
       <span class="label" aria-hidden="true">&lt;Собраться с мыслями&gt;</span>
     </div>
@@ -114,8 +115,9 @@
   <section class="card card-doubts container">
     <h2 class="card_title">1 спринт: А если не получится?</h2>
     <div class="card_images">
-      <img src="./images/Cat Love GIF by Debellum.gif"
+      <img src="./images/Cat.gif"
            class="doubts"
+           loading="lazy"
            alt="Анимированный рисунок кота с всплывающими знаками вопроса">
       <span class="label" aria-hidden="true">&lt;Точка роста&gt;</span>
     </div>
@@ -158,8 +160,9 @@
   <section class="card card-ideal container">
     <h2 class="card_title">2 спринт: Погоня за идеалом</h2>
     <div class="card_images">
-      <img src="./images/Reaction GIF by MOODMAN.gif"
+      <img src="./images/Reaction.gif"
            class="ideal"
+           loading="lazy"
            alt="Жюри показывает карточки с высшим баллом">
       <span class="label" aria-hidden="true">&lt;Ценный фидбек&gt;</span>
     </div>
@@ -202,8 +205,9 @@
   <section class="card card-people_around container">
     <h2 class="card_title">2 спринт: О тех, кто рядом</h2>
     <div class="card_images">
-      <img src="./images/Студенты - 1280x854.jpg"
+      <img src="./images/students.jpg"
            class="people_around"
+           loading="lazy"
            alt="Студенты на занятии">
       <span class="label" aria-hidden="true">&lt;Комьюнити&gt;</span>
     </div>
@@ -249,6 +253,7 @@
     <div class="card_images">
       <img src="./images/sova.jpg"
            class="different_angle"
+           loading="lazy"
            alt="Удивленный взгляд совы наклонившей голову">
       <span class="label" aria-hidden="true">&lt;Свежий взгляд&gt;</span>
     </div>
@@ -290,8 +295,9 @@
   <section class="card card-overcoming container">
     <h2 class="card_title">3 спринт: Когда опускаются руки</h2>
     <div class="card_images">
-      <img src="./images/multitasking GIF.gif"
+      <img src="./images/multitasking.gif"
            class="overcoming"
+           loading="lazy"
            alt="Спанчбоб, который одновременно делает много дел">
       <span class="label" aria-hidden="true">&lt;Приоритеты&gt;</span>
     </div>
@@ -336,6 +342,7 @@
     <div class="card_images">
       <img src="./images/138266.jpg"
            class="inspiration"
+           loading="lazy"
            alt="Девушка едет на скейтборде">
       <span class="label" aria-hidden="true">&lt;Новые горизонты&gt;</span>
     </div>

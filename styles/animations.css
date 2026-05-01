@@ -54,7 +54,7 @@
 }
 
 .like-icon:active .core {
-    fill: var(--contour);
+    fill: var(--animation-fill-color);
     transition: 0.3s linear 0s;
 }
 
